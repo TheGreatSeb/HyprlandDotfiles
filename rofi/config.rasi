@@ -1,0 +1,165 @@
+/************************************************
+ * ROFI Color theme
+ * User: leofa
+ * Copyright: 2017 leofa
+ ***********************************************/
+configuration {
+    display-drun: "Applications";
+    display-calc: "Calculator";
+    font: "CaskaydiaCove Nerd Font 16";
+    font-family: "Noto Color Emoji";
+    modi: "drun,calc,emoji";
+}
+
+* {
+    purple:                         #b579cc;
+    background-background:rgb(21, 15, 26);
+    selected-normal-foreground:  @purple;
+    foreground:                  #ffffff;
+    normal-foreground:           #ffffff;
+    alternate-normal-background: @background-background;
+    red:                         @background-background;
+    selected-urgent-foreground:  @background-background;
+    blue:                        #b579cc;
+    urgent-foreground:           @background-background;
+    alternate-urgent-background: @background-background;
+    active-foreground:           @background-background;
+    lightbg:                     @background-background;
+    selected-active-foreground:  #b579cc;
+    alternate-active-background: #b579cc;
+    background:                  @background-background;
+    alternate-normal-foreground: @foreground;
+    normal-background:           @background;
+    lightfg:                     @background-background;
+    selected-normal-background:  @background-background;
+    border-color:                #b579cc;
+    spacing:                     20;
+    separatorcolor:              @background-background;
+    urgent-background:           @background-background;
+    selected-urgent-background:  @background-background;
+    alternate-urgent-foreground: @background-background;
+    background-color:            @background-background;
+    alternate-active-foreground: @background-background;
+    active-background:           @background-background;
+    selected-active-background:  @background-background;
+    
+}
+window {
+    font: "CaskaydiaCove Nerd Font 16";
+    background-color: @background;
+    border:           3;
+    padding:          5;
+    border-radius: 10px;
+    border-color: @purple;
+}
+mainbox {
+    border:  0;
+    padding: 10;
+}
+message {
+    border:       2px 0px 0px ;
+    border-color: @separatorcolor;
+    padding:      1px ;
+}
+textbox {
+    font: "CaskaydiaCove Nerd Font 13";
+    text-color: @purple;
+}
+listview {
+    fixed-height: 0;
+    border:       2px 0px 0px ;
+    border-color: @separatorcolor;
+    spacing:      2px ;
+    scrollbar:    true;
+    padding:      2px 0px 0px ;
+    lines: 5;
+}
+element {
+    border:  0;
+    padding: 1px ;
+}
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+element.normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+element.normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+scrollbar {
+    width:        0px ;
+    border:       0;
+    handle-color: @normal-foreground;
+    handle-width: 0px ;
+    padding:      0;
+}
+mode-switcher {
+    border:       2px 0px 0px ;
+    border-color: @separatorcolor;
+}
+button {
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+inputbar {
+    spacing:    0;
+    text-color: @normal-foreground;
+    padding:    1px ;
+}
+case-indicator {
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+entry {
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+prompt {
+    spacing:    0;
+    text-color: @purple;
+}
+inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @purple;
+}
